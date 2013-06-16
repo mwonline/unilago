@@ -1,0 +1,621 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>PurityFX - Incredibly Powerful Jooma! 2.5 Template</title>
+	
+	<meta name="description" content="Here is an offline version of the PurityFX Template Documentation. Have a minute to read and understand the basics on installation, upgrade and customization. Enjoy!">
+	<meta name="author" content="JoomFX">
+	<meta name="copyright" content="JoomFX">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2013-05-03T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#008C9E;}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ol{border-top:1px solid #212424;}
+		#documenter_sidebar ol a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ol a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ol a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#customization">Customization</a></li>
+			<li><a href="#upgrade">Upgrade</a></li>
+			<li><a href="#module_positions">Module Positions</a></li>
+			<li><a href="#cta_buttons_portfolio_contact">CTA Buttons (Portfolio, Contact)</a></li>
+			<li><a href="#cta_button">CTA Button</a></li>
+			<li><a href="#features_module">Features Module</a></li>
+			<li><a href="#featured_projects">Featured Projects</a></li>
+			<li><a href="#our_clients">Our Clients</a></li>
+			<li><a href="#get_in_touch_footer">Get In Touch (Footer)</a></li>
+			<li><a href="#social_icons">Social Icons</a></li>
+			<li><a href="#google_map_contact_us">Google Map (Contact Us)</a></li>
+			<li><a href="#module_class_suffixes">Module Class Suffixes</a></li>
+			<li><a href="#image_sizes_important">Image Sizes (Important)</a></li>
+			<li><a href="#joomfx_user">JoomFX user</a></li>
+			<li><a href="#white_screen_after_installation">White Screen after Installation!!</a></li>
+			<li><a href="#boxed_layout">Boxed Layout</a></li>
+			<li><a href="#support">Support</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright JoomFX 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>PurityFX</h1><h2>Incredibly Powerful Jooma! 2.5 Template</h2><hr><ul><li>Created: 04/15/2013</li><li>latest Update: 05/03/2013</li><li>By: JoomFX</li><li><a href=""></a></li><li>Email: <a href="mailto:&#106;&#111;&#111;&#109;&#102;&#120;&#100;&#101;&#115;&#105;&#103;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#111;&#111;&#109;&#102;&#120;&#100;&#101;&#115;&#105;&#103;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li></ul><p>Here is an offline version of the PurityFX Template Documentation. Have a minute to read and understand the basics on installation, upgrade and customization. Enjoy!</p></section><section id="installation">
+	<h3>Installation</h3><hr class="notop">
+<h3 style="margin:0">
+	Technical Requirements</h3>
+<ul>
+	<li>
+		localhost <a href="http://www.apachefriends.org/en/xampp.html" target="_blank">xampp</a>, <a href="http://www.wampserver.com/en/" target="_blank">wamp</a> or any Apache with PHP and MySQL server.</li>
+	<li>
+		Livesite (preferably a sub-domain for testing).</li>
+	<li>
+		For <strong>Manual Installation</strong>, you need a full installation package for Joomla! 2.5.</li>
+</ul>
+<h3>
+	Quickstart Installation</h3>
+<p>
+	The Quickstart Package consists of a complete Joomla! + Template + Extensions + Sample Content, excellent for&nbsp;beginner users&nbsp;to explore back-end settings and sample content. Installing the Quickstart is just like installing Joomla!, but you will have the full demo of the template on your server. Once your environment is ready, follow this quick guide:</p>
+<ul>
+	<li>
+		Localhost only: create a new folder in the <strong>htdocs</strong> folder for Xampp (<strong>www</strong> folder for Wamp). Example: <em>my-website</em></li>
+	<li>
+		Unpack/copy all files and folders of the Quickstart folder into this newly created folder or upload them into your sub-domain folder on your live site</li>
+	<li>
+		Open your favorite browser and type in the address bar localhost/<em>my-website </em>for localhost or <em>sub-domain</em>.my-live-site.com for your live site sub-domain, then hit Enter.</li>
+	<li>
+		Install Joomla!. There will <strong>NOT</strong> be an &quot;Install Sample Data&quot; button. It will be automatically installed.</li>
+	<li>
+		Watch this video tutorial on how to install Joomla! <a href="http://www.youtube.com/watch?v=fIoUNi7L5wg" target="_blank">Click here!</a></li>
+</ul>
+<h3>
+	Manual Installation</h3>
+<p>
+	Manual Installation refers to installing the template on your Joomla! powered website. This means you already have a website with content items, modules, extensions, so you just decided you want to improve the design of your website. Please note that this template requires the Gantry 4 libraries. Do not worry, everything is included in the <em>tpl_purityfx_J25.zip</em> file and will be automatically installed. So here&#39;s what you have to do:</p>
+<ul>
+	<li>
+		Log-in to your Joomla! 2.5 back-end (www.your-website.com/administrator).</li>
+	<li>
+		Go to <strong>Extensions</strong> menu at the top and click <strong>Extensions Manager</strong>.</li>
+	<li>
+		Click <strong>Choose File</strong> and find the provided installation file <em>tpl_purity_J25.zip</em>, then click the <strong>Open</strong> button.</li>
+	<li>
+		Click <strong>Upload &amp; Install</strong>. The template is now installed.</li>
+	<li>
+		Go to <strong>Extensions</strong> menu at the top and click <strong>Templates Manager</strong>.</li>
+	<li>
+		Select the newly installed template and click the <strong>Make default</strong> button in the top-right toolbar.</li>
+	<li>
+		Check the front-end now. There it is!</li>
+</ul>
+</section>
+<section id="customization">
+	<h3>Customization</h3><hr class="notop">
+<h3>
+	Customizing the template</h3>
+<p>
+	PurityFX styling is using LESS - enhanced styling language. Actually, LESS is the same as CSS, it is just much more powerful. In order to make some styling customization you need to edit some LESS files located in the&nbsp; <em>../templates/purityfx/less</em> foder. I have written pure CSS in most of th the LESS files so it can be easier for you to make changes. Here are the files you might want to edit:</p>
+<ul>
+	<li>
+		<strong><em>header-dark.less</em></strong> - The header and some other stylings specific for the Dark Theme.</li>
+	<li>
+		<strong><em>header-light.less</em></strong> - The header and some other stylings specific for the Light Theme.</li>
+	<li>
+		<em><strong>menu-dark.less</strong></em> - Styling for the Dark Menu</li>
+	<li>
+		<em><strong>menu-light.less</strong></em> - Styling for the Light Menu</li>
+	<li>
+		<strong><em>k2.less</em></strong> - The K2 Component Styling.</li>
+	<li>
+		<strong><em>template-custom.less</em></strong> - The main styling file. Most of the things you will need are located here.</li>
+	<li>
+		You might also need to change something in the other files but it will be in a very rare occasions.</li>
+</ul>
+<h3>
+	Changing the logo</h3>
+<p>
+	You will need to change your logo, that&#39;s for sure :) Now, you can do that very easily from the <strong>Style</strong> tab in the <strong>Template Manager</strong>. The logo defines the height of the <strong>header bar</strong> so if your logo is with different height than the PurityFX demo logo ( 55px ) you might need to adjust<strong> </strong>the logo margins in order to make it in the middle of the header. You can do that very easily:</p>
+<ol>
+	<li>
+		Open <strong><em>template.less </em></strong>and go to line 21. You will find the following code:</li>
+</ol>
+<pre class="brush: html">
+.logo-block {
+&nbsp;&nbsp; &nbsp;padding: 0 15px;
+&nbsp;&nbsp; &nbsp;margin: 7px 10px;
+}
+
+</pre>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. You need to increase/decrease the <strong>margin</strong> pixels, so it looks like this, for example:</p>
+<pre class="brush: html">
+.logo-block {
+&nbsp;&nbsp; &nbsp;padding: 0 15px;
+&nbsp;&nbsp; &nbsp;margin: 15px 10px;
+}
+
+</pre>
+<p>
+	Also, you might need to adjust the paddings of the menu so it can be in the middle of the header:</p>
+<ol>
+	<li>
+		Open <strong><em>menu.less </em></strong>and go to line 90. You will find the following code:</li>
+</ol>
+<pre class="brush: html">
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &gt; li &gt; .item {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; font-size: @menuFontSize;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; line-height: @menuLineHeight + 2;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-top: 23px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-bottom: 23px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-left: 20px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-right: 20px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; position: relative;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-transform: uppercase;
+
+</pre>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. You need to increase/decrease the <strong>padding-top </strong>and<strong> padding-bottom</strong> pixels, so it looks like this, for example:</p>
+<pre class="brush: html">
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &gt; li &gt; .item {
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; font-size: @menuFontSize;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; line-height: @menuLineHeight + 2;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-top: 31px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-bottom: 31px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-left: 20px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-right: 20px;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; position: relative;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-transform: uppercase;
+</pre>
+<p>
+	Basically, this is the most important you need to know about the customization.&nbsp; You might also want to check the Gantry Documentation <a href="http://www.gantry-framework.org/documentation" target="_blank">here</a>.</p>
+</section>
+<section id="upgrade">
+	<h3>Upgrade</h3><hr class="notop">
+<h4>
+	Upgrading the template</h4>
+<p>
+	This stands as a comprehensive and complete guide on how to deal with upgrade on any Joomla! 2.5 website<strong> </strong>on a production live site or any other testing or development environment.</p>
+<ul>
+	<li>
+		Back-up a copy of your template (especially if you have made customizations).</li>
+	<li>
+		Go to <strong>Global Configuration</strong> and enable the <em>Offline Mode</em> (recommended if you have a production live site, you might not want your users to see layout breaks or critical errors while files are being replaced/copied or edited).</li>
+	<li>
+		Unset the template as default (<strong>Extensions</strong> menu<strong> - Template Manager - </strong>select another template and click <strong>Default</strong>).</li>
+	<li>
+		Uninstall the old version of the template ( For Joomla! 2.5 -&gt; <strong>Extensions</strong> - <strong>Extensions Manager</strong> - <strong>Manage</strong> tab - select template and click <strong>Uninstall</strong>).</li>
+	<li>
+		Install the new version of the template.</li>
+	<li>
+		Set the template as default again.</li>
+	<li>
+		Disable <em>Offline Mode</em> in the <strong>Global Configuration</strong>.</li>
+</ul>
+<h4>
+	Gantry Framework Upgrade</h4>
+<p>
+	This is just a simple one click task. If there is a new version of the Gantry Framework released you will notice that in the template settings - <strong>Extensions -&gt; Template Manager -&gt; PurityFX</strong>. In the <strong>Overview</strong> tab you can see if you are up-to-date or if there is a newer version. Then just click on the button.</p>
+</section>
+<section id="module_positions">
+	<h3>Module Positions</h3><hr class="notop">
+<p>
+	PurityFX comes with 83+ module positions. You can see all module positions on the PurityFX demo under <strong>Joomla -&gt; Module Positions</strong>:</p>
+<p>
+	http://joomfx.com</p>
+<h4>
+	Quickstart Template - Modules Overview</h4>
+<p>
+	Here, just for your orientation, where the modules from the demo are published:</p>
+<ul>
+	<li>
+		The Slideshows - <strong>fullscreen</strong> or <strong>showcase-a</strong> (depending on the Slideshow Module)</li>
+	<li>
+		Login - <strong>login</strong></li>
+	<li>
+		CTA Buttons (portfolio, contact us) - <strong>maintop-a</strong></li>
+	<li>
+		Features - <strong>maintop-a</strong></li>
+	<li>
+		&quot;Featured Projects&quot; module - <strong>mainbottom-a</strong></li>
+	<li>
+		&quot;Latest Blogs&quot; module - <strong>extension-a</strong></li>
+	<li>
+		&quot;Our Clients&quot; module - <strong>bottom-a</strong></li>
+	<li>
+		&quot;Useful Link&quot; - <strong>footer-a</strong></li>
+	<li>
+		&quot;Feedbacks&quot; - <strong>footer-b</strong></li>
+	<li>
+		&quot;Newsletter&quot; - <strong>footer-c</strong></li>
+	<li>
+		&quot;Get in Touch&quot; - <strong>footer-d</strong></li>
+	<li>
+		Copyright - <strong>copyright-a</strong></li>
+	<li>
+		Social Icons - <strong>copyright-f</strong></li>
+</ul>
+<p>
+	&nbsp;On Home Option 2:</p>
+<ul>
+	<li>
+		The Slideshows - <strong>fullscreen</strong> or <strong>showcase-a</strong> (depending on the Slideshow Module)</li>
+	<li>
+		Login - <strong>login</strong></li>
+	<li>
+		CTA Button - <strong>maintop-a</strong></li>
+	<li>
+		Features - <strong>maintop-a</strong></li>
+	<li>
+		Portfolio (Homepage) - <strong>mainbottom-a </strong>- MODULE CLASS SUFIX:&nbsp;&nbsp; <strong>portfolio</strong></li>
+	<li>
+		&quot;Our Sponsors&quot; module - <strong>bottom-a</strong></li>
+	<li>
+		&quot;Our Clients&quot; module - <strong>maintop-a</strong></li>
+	<li>
+		&quot;Useful Link&quot; - <strong>footer-a</strong></li>
+	<li>
+		&quot;Feedbacks&quot; - <strong>footer-b</strong></li>
+	<li>
+		&quot;Newsletter&quot; - <strong>footer-c</strong></li>
+	<li>
+		&quot;Get in Touch&quot; - <strong>footer-d</strong></li>
+	<li>
+		Copyright - <strong>copyright-a</strong></li>
+	<li>
+		Social Icons - <strong>copyright-f</strong></li>
+</ul>
+<p>
+	&nbsp;On the other pages:</p>
+<ul>
+	<li>
+		Page Header - <strong>breadcrumb-a</strong></li>
+	<li>
+		Breadcrumb - <strong>breadcrumb-f</strong></li>
+	<li>
+		The modules on the right - <strong>sidebar-a</strong></li>
+</ul>
+<p>
+	&nbsp;As you can see most of the modules are published in the maintop-a postion. You can keep them as they are and just use the &quot;Order&quot; field to order them. You can of course publish them in another positions.</p>
+</section>
+<section id="cta_buttons_portfolio_contact">
+	<h3>CTA Buttons (Portfolio, Contact)</h3><hr class="notop">
+<p>
+	The CTA Buttons (Portfolio, Contact) module has its own styling. You need to create a Custom HTML module and paste the following code:</p>
+<pre class="brush: html">
+&lt;div class=&quot;jfx_action&quot;&gt;
+&lt;h1&gt;We Design and Develop Beautiful Templates for Business and Creative Websites!&lt;/h1&gt;
+&lt;h2&gt;You can check out our amazing &lt;a href=&quot;index.php/features/portfolio&quot;&gt;portfolio&lt;/a&gt; or you can simply &lt;a href=&quot;index.php/features/contact-us&quot;&gt;contact us&lt;/a&gt; for more information.&lt;/h2&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	Then just replace the demo content with yours. It is always recommanded to disable the Editor and then edit the Custom HTML modules. Otherwise, the Editor might strip some of the code.</p>
+</section>
+<section id="cta_button">
+	<h3>CTA Button</h3><hr class="notop">
+<p>
+	The CTA Button module has its own styling. You need to create a Custom HTML module and paste the following code:</p>
+<pre class="brush: html">
+&lt;div class=&quot;jfx_action2 clearfix&quot;&gt;
+&lt;h1&gt;Do not forget to check the amazing Boxed version of PurityFX!&lt;/h1&gt;
+&lt;a class=&quot;btn-primary&quot; href=&quot;#&quot;&gt;Boxed Version&lt;/a&gt;&lt;/div&gt;
+</pre>
+<p>
+	Then just replace the demo content with yours. It is always recommanded to disable the Editor and then edit the Custom HTML modules. Otherwise, the Editor might strip some of the code.</p>
+</section>
+<section id="features_module">
+	<h3>Features Module</h3><hr class="notop">
+<p>
+	The Features module has its own styling. You need to create a Custom HTML module and paste the following code:</p>
+<pre class="brush: html">
+&lt;div class=&quot;features clearfix&quot;&gt;
+&lt;div&gt;
+&lt;h3&gt;&lt;a class=&quot;icon-th-list&quot; href=&quot;#&quot;&gt;&lt;span&gt;Responsive Design&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, conse adipiscing elit. Prae eget massatar vitae dolor corper non sit tortor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3&gt;&lt;a class=&quot;icon-random&quot; href=&quot;#&quot;&gt;&lt;span&gt;Amazing Sliders&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, conse adipiscing elit. Prae eget massatar vitae dolor corper non sit tortor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h3&gt;&lt;a class=&quot;icon-leaf&quot; href=&quot;#&quot;&gt;&lt;span&gt;Unlimited Colors&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, conse adipiscing elit. Prae eget massatar vitae dolor corper non sit tortor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;lastone&quot;&gt;
+&lt;h3&gt;&lt;a class=&quot;icon-ok-sign&quot; href=&quot;#&quot;&gt;&lt;span&gt;500+ Google Fonts&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, conse adipiscing elit. Prae eget massatar vitae dolor corper non sit tortor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	Then just replace the demo content with yours. It is always recommanded to disable the Editor and then edit the Custom HTML modules. Otherwise, the Editor might strip some of the code.</p>
+<p>
+	The Header link of each feature uses a <strong>Font Awesome icon</strong> in front of it:</p>
+<pre class="brush: html">
+&lt;a class=&quot;icon-th-list&quot; href=&quot;#&quot;&gt;
+</pre>
+<p>
+	You just need to replace the <strong>class</strong> in order to put another icon. You can find all available icons at the bottom of the <strong>Typography page</strong>.</p>
+</section>
+<section id="featured_projects">
+	<h3>Featured Projects</h3><hr class="notop">
+<p>
+	You need to have the <strong>Widgetkit</strong> installed. Then all you need to do is to create a Custom HTML module and use the HTML code below.</p>
+<pre class="brush: html">
+&lt;div id=&quot;featuredprojects&quot;&gt;
+&lt;ul class=&quot;clearfix&quot;&gt;
+&lt;li&gt;
+&lt;div class=&quot;outerimg&quot;&gt;&lt;a data-lightbox=&quot;transitionIn:elastic;transitionOut:elastic;&quot; href=&quot;images/image1.jpg&quot; data-spotlight=&quot;on&quot;&gt;&lt;img src=&quot;images/image1.jpg&quot; border=&quot;0&quot; alt=&quot;Spotlight Image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;information clearfix&quot;&gt;
+&lt;h4&gt;Pellentesque et elit risus&lt;/h4&gt;
+&lt;p&gt;business, communications&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class=&quot;outerimg&quot;&gt;&lt;a data-lightbox=&quot;transitionIn:elastic;transitionOut:elastic;&quot; href=&quot;images/image2.jpg&quot; data-spotlight=&quot;on&quot;&gt;&lt;img src=&quot;images/image2.jpg&quot; border=&quot;0&quot; alt=&quot;Spotlight Image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;information clearfix&quot;&gt;
+&lt;h4&gt;Aliquam sodales quam&lt;/h4&gt;
+&lt;p&gt;hardware, technology&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class=&quot;outerimg&quot;&gt;&lt;a data-lightbox=&quot;transitionIn:elastic;transitionOut:elastic;&quot; href=&quot;images/image3.jpg&quot; data-spotlight=&quot;on&quot;&gt;&lt;img src=&quot;images/image3.jpg&quot; border=&quot;0&quot; alt=&quot;Spotlight Image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;information clearfix&quot;&gt;
+&lt;h4&gt;Maecenas facili dapibus&lt;/h4&gt;
+&lt;p&gt;design, development&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;lastone&quot;&gt;
+&lt;div class=&quot;outerimg&quot;&gt;&lt;a data-lightbox=&quot;transitionIn:elastic;transitionOut:elastic;&quot; href=&quot;images/image4.jpg&quot; data-spotlight=&quot;on&quot;&gt;&lt;img src=&quot;images/image4.jpg&quot; border=&quot;0&quot; alt=&quot;Spotlight Image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;information clearfix&quot;&gt;
+&lt;h4&gt;Donec pulvinar nisi odio&lt;/h4&gt;
+&lt;p&gt;corporate, others&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+</pre>
+<p>
+	Then just replace the demo content with yours. Basically, you need to change the following:</p>
+<p>
+	1. The image - &lt;img src=&quot;images/image4.jpg&quot;</p>
+<p>
+	2. The Title - &lt;h4&gt;</p>
+<p>
+	3. The text - &lt;p&gt;</p>
+<p>
+	4. The link - &lt;a class=&quot;readon&quot; href=&quot;#&quot;&gt;</p>
+<p>
+	It is always recommanded to disable the Editor and then edit the Custom HTML modules. Otherwise, the Editor might strip some of the code.</p>
+</section>
+<section id="our_clients">
+	<h3>Our Clients</h3><hr class="notop">
+<p>
+	You need to have the <strong>Widgetkit</strong> installed. Then all you need to do is to create a Custom HTML module and use the HTML code below.</p>
+<pre class="brush: html">
+&lt;div id=&quot;sponsors&quot;&gt;
+&lt;ul class=&quot;clearfix&quot;&gt;
+&lt;li&gt;
+&lt;a data-spotlight=&quot;effect:fade;&quot; href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;img src=&quot;images/logo11.png&quot; alt=&quot;&quot; width=&quot;230px&quot; height=&quot;60px&quot;/&gt;
+&nbsp;&nbsp; &nbsp;&lt;span class=&quot;overlay remove-padding&quot;&gt;&lt;img alt=&quot;Spotlight Image&quot; src=&quot;images/logo111.png&quot; width=&quot;230px&quot; height=&quot;60px&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a data-spotlight=&quot;effect:fade;&quot; href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;img src=&quot;images/logo22.png&quot; alt=&quot;&quot; width=&quot;230px&quot; height=&quot;60px&quot;/&gt;
+&nbsp;&nbsp; &nbsp;&lt;span class=&quot;overlay remove-padding&quot;&gt;&lt;img alt=&quot;Spotlight Image&quot; src=&quot;images/logo222.png&quot; width=&quot;230px&quot; height=&quot;60px&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a data-spotlight=&quot;effect:fade;&quot; href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;img src=&quot;images/logo33.png&quot; alt=&quot;&quot; width=&quot;230px&quot; height=&quot;60px&quot;/&gt;
+&nbsp;&nbsp; &nbsp;&lt;span class=&quot;overlay remove-padding&quot;&gt;&lt;img alt=&quot;Spotlight Image&quot; src=&quot;images/logo333.png&quot; width=&quot;230px&quot; height=&quot;60px&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class=&quot;lastone&quot;&gt;
+&lt;a data-spotlight=&quot;effect:fade;&quot; href=&quot;#&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;img src=&quot;images/logo44.png&quot; alt=&quot;&quot; width=&quot;230px&quot; height=&quot;60px&quot;/&gt;
+&nbsp;&nbsp; &nbsp;&lt;span class=&quot;overlay remove-padding&quot;&gt;&lt;img alt=&quot;Spotlight Image&quot; src=&quot;images/logo444.png&quot; width=&quot;230px&quot; height=&quot;60px&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	Then just replace the demo content with yours. It is always recommanded to disable the Editor and then edit the Custom HTML modules. Otherwise, the Editor might strip some of the code.</p>
+<p>
+	This module just fades out the first image and then fades in the second. So you need two images - the first should be black and white and the second should be colored. Simply take one colored image and then make it black and white in Photoshop.</p>
+</section>
+<section id="get_in_touch_footer">
+	<h3>Get In Touch (Footer)</h3><hr class="notop">
+<p>
+	The Get in Touch module has its own styling. You need to create a Custom HTML module and paste the following code:</p>
+<pre class="brush: html">
+&lt;div class=&quot;touch&quot;&gt;
+&lt;div class=&quot;aboutus&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&quot;address&quot;&gt;64184 Vincent Place&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;phone&quot;&gt;+1.800.000.12.34&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;skype&quot;&gt;&lt;a href=&quot;skype:gossipfx?chat&quot;&gt;GossipFX&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;email&quot;&gt;&#111;&#102;&#102;&#105;&#99;&#101;&#64;&#106;&#111;&#111;&#109;&#102;&#120;&#46;&#99;&#111;&#109;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;chat&quot;&gt;Live Chat&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	Then just replace the demo content with yours. It is always recommanded to disable the Editor and then edit the Custom HTML modules. Otherwise, the Editor might strip some of the code.</p>
+</section>
+<section id="social_icons">
+	<h3>Social Icons</h3><hr class="notop">
+<p>
+	The Social Icons module has its own styling. You need to create a Custom HTML module and paste the following code:</p>
+<pre class="brush: html">
+&lt;div class=&quot;social clearfix&quot;&gt;
+&lt;ul&gt;
+&lt;li class=&quot;facebookli&quot;&gt;
+&lt;div class=&quot;facebook&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;FB&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Facebook&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;twitterli&quot;&gt;
+&lt;div class=&quot;twitter&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;TW&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Twitter&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;googleli&quot;&gt;
+&lt;div class=&quot;google&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;G+&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Google +&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;rssfeedli&quot;&gt;
+&lt;div class=&quot;rssfeed&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;RS&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;RSS Feeds&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;vimeoli&quot;&gt;
+&lt;div class=&quot;vimeo&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;VM&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Vimeo&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;skypeli&quot;&gt;
+&lt;div class=&quot;skype&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;SK&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Skype&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;linkedinli&quot;&gt;
+&lt;div class=&quot;linkedin&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;IN&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Linkedin&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;youtubeli&quot;&gt;
+&lt;div class=&quot;youtube&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;YT&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Youtube&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;pinterestli&quot;&gt;
+&lt;div class=&quot;pinterest&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;PT&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Pinterest&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<p>
+	All you need to do is to edit the <strong>&lt;a href=&quot;#&quot;&gt;</strong> tag and the <strong>socialtip</strong> class. And more specifically, replace the <strong>#</strong> with the particular URL. If you do not need some of the Social Icons just delete its code, for example:</p>
+<pre class="brush: html">
+&lt;li class=&quot;youtubeli&quot;&gt;
+&lt;div class=&quot;youtube&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;YT&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Youtube&lt;/div&gt;
+&lt;/li&gt;
+&lt;li class=&quot;pinterestli&quot;&gt;
+&lt;div class=&quot;pinterest&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;PT&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;socialtip&quot;&gt;Pinterest&lt;/div&gt;
+&lt;/li&gt;
+</pre>
+<p>
+	&nbsp;</p>
+</section>
+<section id="google_map_contact_us">
+	<h3>Google Map (Contact Us)</h3><hr class="notop">
+<p>
+	The <strong>Google Map</strong> on the <strong>Contact us</strong>&nbsp;page also has some specific styling. You need to create a Custom HTML module and paste the following code and edit your location:</p>
+<pre class="brush: html">
+&lt;p&gt;{mosmap width=&#39;100%&#39;|height=&#39;500&#39;|lat=&#39;52.052312&#39;|lon=&#39;4.447141&#39;|zoom=&#39;7&#39;|mapType=&#39;Map&#39;| marker=&#39;1&#39;|align=&#39;center&#39; }&lt;/p&gt;
+</pre>
+<p>
+	In order to put your location in the Google Map you need to change the <strong>lat,</strong>&nbsp;<strong>lon </strong>and<strong> zoom</strong> attributes (Latitute and Longitude). You can find your values from this <a href="http://www.webestools.com/google-maps-code-generator-insert-map-on-website-javascript-free-google-map-script.html">site</a> or from this <a href="http://itouchmap.com/latlong.html" target="_blank">site</a></p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="module_class_suffixes">
+	<h3>Module Class Suffixes</h3><hr class="notop">
+<p>
+	It is important to know that some modules are using a specific class suffix so they can have a unique layout.</p>
+<p>
+	Actually, in PurityFX there is only one module that uses a specific Module Class Suffix - this is the Portfolio (Homepage) module, which uses the <strong>portfolio</strong> suffix.</p>
+</section>
+<section id="image_sizes_important">
+	<h3>Image Sizes (Important)</h3><hr class="notop">
+<p>	It is very important that you use the same size of images on you website. Thishow the images will look much better! For example, if you have the same size of images they will look perfectly and it will make your site look profesional. In the demo, all my K2 Images are <strong>1080x450.</strong></p>
+<p>	Here are the most important image sizes from the demo site. They are all related to the K2 component. Have in mind that these image sizes are also important for the category view, item view, tag view, etc...</p>
+<p>	<img alt="" src="assets/images/image_2.png" style="width: 855px; height: 555px;"></p>
+</section>
+<section id="joomfx_user">
+	<h3>JoomFX user</h3><hr class="notop">
+<p>	If you install the Quickstart Package you will see that there are two users - the user that you have created when installing the Quickstart and <strong>JoomFX</strong>. You need to keep JoomFX because it is the owner of the demo content, mostly the K2 Items. If you are affraid of this user you can simply change its password.</p>
+<p>	If you still insist to delete it you can do it. But then you will get an error in the K2 Stuff that user with such ID cannot be loaded. Then you simply need to delete all demo K2 Items created by JoomFX. Not only to Trash them, you need to completely delete them and the error will be gone. Then just create your K2 Categories, K2 Items, ect.</p>
+</section>
+<section id="white_screen_after_installation">
+	<h3>White Screen after Installation!!</h3><hr class="notop">
+<p>	On some servers/hosting providers you might get a blank screen after installing the Quickstart. All you need to do is to increase the &ldquo;memory_limit&rdquo; variable in the <strong>php.ini</strong> file to a higher value, for example:</p>
+<p>	<strong>memory_limit = 64M</strong></p>
+<p>	Please have in mind that you need to restart the <strong>Apache Server</strong> after editing the php.ini file.</p>
+</section>
+<section id="boxed_layout">
+	<h3>Boxed Layout</h3><hr class="notop">
+<p>
+	In order to switch to <strong>Boxed Layout</strong> you just need to rename few files as described below:</p>
+<ol>
+	<li>
+		Rename the &quot;template-custom.less&quot; file to &quot;template-custom_full.less) - root/templates/purityfx/less</li>
+	<li>
+		Rename the &quot;index.php&quot; file to &quot;index_full.php&quot; - root/templates/purityfx</li>
+	<li>
+		Rename the &quot;gantry.config.php&quot; file to &quot;gantry.config_full.php&quot; - root/templates/purityfx</li>
+	<li>
+		Rename the &quot;template-options.xml&quot; file to &quot;template-options_full.xml&quot; - root/templates/purityfx</li>
+	<li>
+		Rename the &quot;template-custom_boxed.less&quot; file to &quot;template-custom.less) - root/templates/purityfx/less</li>
+	<li>
+		Rename the &quot;index_boxed.php&quot; file to &quot;index.php&quot; - root/templates/purityfx</li>
+	<li>
+		Rename the &quot;gantry.config_boxed.php&quot; file to &quot;gantry.config.php&quot; - root/templates/purityfx</li>
+	<li>
+		Rename the &quot;template-options_boxed.xml&quot; file to &quot;template-options.xml&quot; - root/templates/purityfx</li>
+</ol>
+<p>
+	That&#39;s it. Now you have the PurityFX with boxed layout. You also will find some additional options in the Template Manager now (option to change the background).</p>
+<p>
+	<strong>Important:</strong>&nbsp;&nbsp; In the Boxed Layout you should not use the Revolution (Fullscreen) module. You should use the Revolution (Normal) instead. Also, if you are going to use the RS Slideshow module you need to use 1080x450 images (in the Quickstart Package the images are 1030x450 and that&#39;s why they are not filling the whole screen).</p>
+</section>
+<section id="support">
+	<h3>Support</h3><hr class="notop">
+<p>	If you have any questions or problems and you are not able to find the solution in this documentation, please do not hesitate to <a href="http://joomfx.com/support" target="_blank"><strong>contact us</strong></a> . Just register in our support forum and open a new discussion.</p>
+<p>	Please have in mind that customization requests are not included in the support. We hope you understand that with hundreds of customers it is simply not possible to configure the site for you or make some major customizations. There are plenty of Freelancer services online that will do the customization for even less than $50. Thank you for understanding!</p>
+</section>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+	<name>Animate on hover</name>
+	<author>Daniel Pardons</author>
+	<creationDate>14 November 2012</creationDate>
+	<copyright>2011, Joompad.be</copyright>
+	<license>GPLv2.0 - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>daniel.pardons@joompad.be</authorEmail>
+	<authorUrl>www.joompad.be</authorUrl>
+	<version>3.4a</version>
+	<description>Animate on hover module based on jQuery Timothy van Sas tutorial "Animate a hover with jQuery" (http://www.incg.nl/blog/2008/hover-block-jquery/)<p> <br />Supports module multiple instances on the same page by defining a gallery id. Adapt settings for Gallery and eventually inline css for title and teaser texts.</p></description>
+
+	<files>
+		<filename module="mod_animate_hover">mod_animate_hover.php</filename>
+		<filename>License.txt</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_animate_hover.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="GALLERY_PARAMETERS">
+				<field name="module_id" type="text" default="" label="AH_MODULEID" description="AH_MODULEID_DESC" />
+				<field name="external_url" type="text" size="80" default="" label="AH_EXTERNALURL" description="AH_EXTERNALURL_DESC" />
+				<field name="folder" type="text" size="80" default="modules/mod_animate_hover/images/" label="AH_IMAGEFOLDER" description="AH_IMAGEFOLDER_DESC" />
+				<field name="gallery_position" type="radio" default="0" label="AH_GALLERYPOSITION" description="AH_GALLERYPOSITION_DESC">
+					<option value="0">LEFT</option>
+					<option value="1">CENTERED</option>
+				</field>
+				<field name="gallery_left_margin" type="text" default="0" label="AH_GALLERYLEFTMARGIN" description="AH_GALLERYLEFTMARGIN_DESC" />
+				<field name="gallery_top_margin" type="text" default="0" label="AH_GALLERYTOPMARGIN" description="AH_GALLERYTOPMARGIN_DESC" />
+				<field name="gallery_bottom_margin" type="text" default="0" label="AH_GALLERYBOTTOMMARGIN" description="AH_GALLERYBOTTOMMARGIN_DESC" />
+
+				<field name="gallery_width" type="text" default="800" label="AH_GALLERYWIDTH" description="AH_GALLERYWIDTH_DESC" />
+				<field name="gallery_bgcolor" type="text" default="black" label="AH_GALLERYBG" description="AH_GALLERYBG_DESC" />
+				<field name="gallery_rows" type="text" default="1" label="AH_GALLERYROWS" description="AH_GALLERYROWS_DESC" />
+				<field name="images_in_row" type="text" default="1" label="AH_IMAGESINROW" description="AH_IMAGESINROW_DESC" />
+				<field name="gallery_row_effect" type="list" default="0" label="AH_GALLERYROWEFFECT" description="AH_GALLERYROWEFFECT_DESC">
+					<option value="0">VERTICAL</option>
+					<option value="1">HORIZONTAL</option>
+					<option value="2">DIAGONAL</option>
+					<option value="3">ALTERNATE_V_H</option>
+					<option value="4">FADE</option>
+					<option value="5">FADE2</option>
+					<option value="6">HORIZONTAL_RL</option>
+					<option value="7">DIAGONAL_TB_RL</option>
+					<option value="8">ALTERNATE_V_TB_H_RL</option>
+				</field>
+				<field name="effect_duration" type="text" default="500" label="AH_EFFECTDURATION" description="AH_EFFECTDURATION_DESC" />
+				<field type="spacer" hr="true" />
+				<field name="gallery_images_use" type="list" default="0" label="AH_GALLERYIMAGESUSE" description="AH_GALLERYIMAGESUSE_DESC">
+					<option value="0">FIXED</option>
+					<option value="1">RANDOMIZE</option>
+				</field>
+
+				<field name="image_width" type="text" default="325" label="AH_IMAGEWIDTH" description="AH_IMAGEWIDTH_DESC" />
+				<field name="image_height" type="text" default="260" label="AH_IMAGEHEIGHT" description="AH_IMAGEHEIGHT_DESC" />
+				<field name="image_margin" type="text" default="5" label="AH_IMAGE_MARGIN" description="AH_IMAGE_MARGIN_DESC" />
+				<field name="overlay_top_offset" type="text" default="0" label="AH_OVERLAY_TOP_OFFSET" description="AH_OVERLAY_TOP_OFFSET_DESC" />
+				<field type="spacer" hr="true" />
+				<field name="image_color_target" type="list" default="0" label="AH_IMAGE_COLOR_TARGET" description="AH_IMAGE_COLOR_TARGET_DESC">
+					<option value="0">TEASERBG</option>
+					<option value="1">TITLE</option>
+					<option value="2">TEASER</option>
+					<option value="3">TITLE_TEASER</option>
+				</field>
+				<field name="teaser_bgcolor" type="text" default="white" label="AH_TEASERBGCOLOR" description="AH_TEASERBGCOLOR_DESC" />
+				<field name="title_color" type="text" default="grey" label="AH_TITLECOLOR" description="AH_TITLECOLOR_DESC" />
+				<field name="title_seperator" type="radio" default="1" label="AH_TITLESEPERATOR" description="AH_TITLESEPERATOR_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="title_center" type="radio" default="0" label="AH_TITLECENTER" description="AH_TITLECENTER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="title_css" type="textarea" rows="10" cols="34" default="font-size: 18px; font-weight: bold; line-height: 20px; margin-left: 10px; font-family: arial; margin-bottom: 0.5em; margin-top: 0.5em;" label="AH_TITLECSS" description="AH_TITLECSS_DESC" />
+				<field name="teaser_nl2br" type="radio" default="0" label="AH_TEASERNL2BR" description="AH_TEASERNL2BR_DESC">
+					<option value="0">DISABLE</option>
+					<option value="1">ENABLE</option>
+				</field>
+				<field name="teaser_padding" type="text" default="16" label="AH_TEASERPADDING" description="AH_TEASERPADDING_DESC" />
+				<field name="teaser_color" type="text" default="white" label="AH_TEASERCOLOR" description="AH_TEASERCOLOR_DESC" />
+				<field name="teaser_center" type="radio" default="0" label="AH_TEASERCENTER" description="AH_TEASERCENTER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="teaser_css" type="textarea" rows="10" cols="34" default="display: block; font-size: 12px; font-weight: normal; margin-left: 10px; font-family: arial; margin-bottom: 0.5em; margin-top: 0.5em;" label="AH_TEASERCSS" description="AH_TEASERCSS_DESC" />
+				<field name="a_css" type="textarea" rows="5" cols="34" default="font-weight: normal; text-decoration: none;" label="AH_ACSS" description="AH_ACSS_DESC" />
+			</fieldset>
+
+			<fieldset name="IMAGES_SETTINGS_01_04">
+				<field name="Image 01" type="spacer" default="" label="AH_IMAGE01" description="" />
+				<field name="image_img1" type="text" size="60" default="incg_hover.gif" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor1" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt1" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title1" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser1" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url1" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url1" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 02" type="spacer" default="" label="AH_IMAGE02" description="" />
+				<field name="image_img2" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor2" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt2" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title2" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser2" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url2" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url2" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 03" type="spacer" default="" label="AH_IMAGE03" description="" />
+				<field name="image_img3" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor3" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt3" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title3" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser3" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url3" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url3" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 04" type="spacer" default="" label="AH_IMAGE04" description="" />
+				<field name="image_img4" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor4" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt4" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title4" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser4" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url4" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url4" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="IMAGES_SETTINGS_05_08">
+				<field name="Image 05" type="spacer" default="" label="AH_IMAGE05" description="" />
+				<field name="image_img5" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor5" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt5" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title5" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser5" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url5" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url5" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 06" type="spacer" default="" label="AH_IMAGE06" description="" />
+				<field name="image_img6" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor6" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt6" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title6" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser6" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url6" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url6" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 07" type="spacer" default="" label="AH_IMAGE07" description="" />
+				<field name="image_img7" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor7" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt7" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title7" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC_DESC" />
+				<field name="image_teaser7" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url7" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url7" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 08" type="spacer" default="" label="AH_IMAGE08" description="" />
+				<field name="image_img8" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor8" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt8" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title8" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser8" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url8" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url8" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="IMAGES_SETTINGS_09_12">
+				<field name="Image 09" type="spacer" default="" label="AH_IMAGE09" description="" />
+				<field name="image_img9" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor9" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt9" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title9" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser9" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url9" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url9" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 10" type="spacer" default="" label="AH_IMAGE10" description="" />
+				<field name="image_img10" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor10" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt10" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title10" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser10" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url10" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url10" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 11" type="spacer" default="" label="AH_IMAGE11" description="" />
+				<field name="image_img11" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor11" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt11" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title11" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser11" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url11" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url11" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 12" type="spacer" default="" label="AH_IMAGE12" description="" />
+				<field name="image_img12" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor12" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt12" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title12" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser12" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url12" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url12" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="IMAGES_SETTINGS_13_16">
+				<field name="Image 13" type="spacer" default="" label="AH_IMAGE13" description="" />
+				<field name="image_img13" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor13" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt13" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title13" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser13" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url13" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url13" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 14" type="spacer" default="" label="AH_IMAGE14" description="" />
+				<field name="image_img14" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor14" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt14" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title14" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser14" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url14" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url14" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 15" type="spacer" default="" label="AH_IMAGE15" description="" />
+				<field name="image_img15" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor15" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt15" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title15" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser15" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url15" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url15" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 16" type="spacer" default="" label="AH_IMAGE16" description="" />
+				<field name="image_img16" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor16" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt16" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title16" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser16" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url16" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url16" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="IMAGES_SETTINGS_17_20">
+				<field name="Image 17" type="spacer" default="" label="AH_IMAGE17" description="" />
+				<field name="image_img17" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor17" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt17" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title17" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser17" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url17" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url17" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 18" type="spacer" default="" label="AH_IMAGE18" description="" />
+				<field name="image_img18" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor18" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt18" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title18" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser18" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url18" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url18" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 19" type="spacer" default="" label="AH_IMAGE19" description="" />
+				<field name="image_img19" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor19" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt19" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title19" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser19" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url19" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url19" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+
+				<field name="Image 20" type="spacer" default="" label="AH_IMAGE20" description="" />
+				<field name="image_img20" type="text" size="60" default="" label="AH_IMGFILENAME" description="AH_IMGFILENAME_DESC" />
+				<field name="image_teaser_bgcolor20" type="text" size="60" default="" label="AH_IMGTEASERBGCOLOR" description="AH_IMGTEASERBGCOLOR_DESC" />
+				<field name="image_alt20" type="text" size="60" default="" label="AH_IMGALT" description="AH_IMGALT_DESC" />
+				<field name="image_title20" type="text" size="60" default="" label="AH_IMGTITLE" description="AH_IMGTITLE_DESC" />
+				<field name="image_teaser20" type="textarea" filter="raw" rows="10" cols="34" default="" label="AH_IMGTEASER" description="AH_IMGTEASER_DESC" />
+				<field name="image_url20" type="text" size="60" default="" label="AH_IMGURL" description="AH_IMGURL_DESC" />
+				<field name="target_url20" type="radio" default="_self" label="AH_IMGTARGET" description="AH_IMGTARGET_DESC">
+					<option value="_self">SELF_BROWSER</option>
+					<option value="_blank">OPEN_NEW_BROWSER</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="load_JQuery" type="radio" default="1" label="LABEL_LOADJQUERY" description="DESC_LOADJQUERY">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="cache" type="list" default="1" label="Caching"
+					description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

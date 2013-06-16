@@ -1,0 +1,43 @@
+.zt_newsiv{position:relative;width: 100%;}
+.newsiv-slider { display:block; overflow: hidden;padding:5px 0; margin: 0 30px; width: 95% !important;}
+.newsiv-slider > ul {display:block; float:left;}
+.newsiv-slider > ul > li{padding:0;background:none;overflow:visible !important;}
+
+.newsiv-slider div.catpanel  {display:table;}
+.newsiv-slider div.catpanel > div {display:inline-block;margin:0 0px;}
+.newsiv-slider div.catpanel div.block { position: relative; }
+.newsiv-slider div.catpanel > div > a{display:block;}
+.newsiv-slider div.catpanel > div > a.img{padding: 5px;border:1px solid #ddd;box-shadow: 0 0 5px #ccc;display: table; margin:auto;}
+.newsiv-slider div.catpanel > div > span.img{padding: 5px;border:1px solid #ddd;box-shadow: 0 0 5px #ccc; display: table; margin:auto;}
+.newsiv-slider div.catpanel > div > a.img:hover{opacity:0.9; border: 1px solid #b7b7b7;}
+.newsiv-slider div.catpanel > div > span.img:hover{opacity:0.9; border: 1px solid #b7b7b7;}
+.newsiv-slider div.catpanel > div > a.title{margin:10px 0; font-size:120%;font-family:Tahoma;}
+.newsiv-slider div.catpanel  div.block p {margin: 0;}
+.newsiv-slider div.catpanel div.block p.introtext {
+  background: url("../images/zt_newsiv/bg-caption.png") repeat scroll left top transparent;
+  bottom: 6%;
+  color: #FFFFFF;
+  height: auto;
+  left: 4%;
+  line-height: 16px;
+  padding: 2px 8px;
+  position: absolute;
+  width: 81%;
+  min-height: 16px;
+}
+div.pagenave { display: block;width:100%;position: absolute; margin: 0; top: 45px;}
+div.pagenave > button{
+    height:17px;width:11px;display:block;border:none;cursor:pointer;padding:0;
+    background:url(../images/zt_newsiv/nav.png) no-repeat;
+}
+div.pagenave > .next { background-position: left -17px; float:right; margin: 0;}
+div.pagenave > .next:hover{background-position: left -34px;}
+div.pagenave > .next:active{background-position: left -34px;}
+
+div.pagenave >.prev { background-position:  0 0; float:left; margin: 0px;}
+div.pagenave > .prev:hover{background-position: 0 -51px;}
+div.pagenave > .prev:active{background-position: 0 -51px;}
+
+
+div.control { display: block; float: left;position: absolute; bottom: 1px;left: 1px; z-index: 9;}
+div.control span {float: left;width: 10px;height: 10px;border: #dfdfdf solid 1px;margin-right: 3px;font-size: 11px;padding: 0 0 3px 3px;cursor: pointer;}
